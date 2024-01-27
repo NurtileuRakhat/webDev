@@ -1,1 +1,2 @@
-Kbtu 4 semestr
+Kbtu
+22B030581
