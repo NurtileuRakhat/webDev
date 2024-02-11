@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Todo List App</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="header__conntainer">
+                <h5>Todo List</h5>
+            </div>
+        </header>
+        <div class="content">
+            <div class="content__container">
+                <div class="todo__header">
+                    <h1>Todo List</h1>
+                </div>
+                <div class="todo__input">
+                    <input type="text" class="input__item" placeholder="New task">
+                    <button class="todo__add" onclick="addItem()">Add</button>
+                </div>
+                <ul id="todo__list"></ul>
+            </div>
+        </div>
+        <script src="script.js"></script>
+    </div>
+</body>
+</html>
