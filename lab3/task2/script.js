@@ -8,8 +8,8 @@ function addItem() {
     let list = document.getElementById('todo__list');
     let listItem = document.createElement('li');
     listItem.innerHTML = `
-        <input type="checkbox" class="checkbox" onchange="toggleDone(this)">
-        <span>${newItemText}</span>
+        <input id="item__${newItemText}" type="checkbox" class="checkbox" onchange="toggleDone(this)">
+        <label for="item__${newItemText}">${newItemText}</label>
         <button class="delete-btn" onclick="deleteItem(this)"><i class="fas fa-trash"></i></button>
     `;
     list.appendChild(listItem);
