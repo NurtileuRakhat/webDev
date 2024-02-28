@@ -7,13 +7,16 @@ import { Product, ProductCategory, products } from '../products';
   styleUrls: ['./product-list.component.css']
 })
 export class ProductListComponent {
-  products: Product[] = [...products];
+  products: Product[] = [...products];  
 
   categories: ProductCategory[] = [];
   selectedCategory: string | null = null;
 
+  
+  constructor() { }
   ngOnInit(): void {
     this.categories = this.getProductCategories();
+    this.products = [...products];
   }
 
   selectCategory(category: string | null): void {
@@ -47,11 +50,24 @@ export class ProductListComponent {
     return categories;
   }
 
+  favourites: Product[] = [];
+  toggleLike(product: Product): void {
+    product.liked = !product.liked;
+    if (product.liked) {
+      this.favourites.push(product);
+    } else {
+      this.favourites = this.favourites.filter(p => p.id !== product.id);
+    }
+  }
   onNotify() {
     window.alert('You will be notified when the product goes on sale');
   }
 
   formatedPrice(price: number): string {
     return price.toLocaleString('kk-KZ');
+  }
+
+  isLiked(product: Product): boolean {
+    return product.liked;
   }
 }

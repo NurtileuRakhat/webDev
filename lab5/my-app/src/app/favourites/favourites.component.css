@@ -1,0 +1,9 @@
+img {
+    width: auto;
+    height: 200px;
+}
+
+.favourites__wrapper {
+    display: flex;
+    flex-direction: column;
+}

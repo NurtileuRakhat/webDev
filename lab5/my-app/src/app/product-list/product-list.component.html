@@ -21,8 +21,8 @@
         </a>
       </h3>
 
-      <p *ngIf="product.rating"><b>Рейтинг:</b> {{ product.rating }}</p>
-
+      <i [class]="product.liked ? 'fa fa-heart' : 'fa fa-heart-o'" (click)="toggleLike(product)">add to liked</i>
+      <p *ngIf="product.rating"><b>Рейтинг:</b> {{ product.rating }}</p> 
       <p *ngIf="product.price">
           <b>Цена:</b> {{ formatedPrice(product.price) }} ₸
       </p>
@@ -34,7 +34,7 @@
       <button type="button" (click)="share(product.url)">
           Share
       </button>
-    
+      
       <app-product-alerts
         [product]="product" 
         (notify)="onNotify()">

@@ -3,7 +3,6 @@ export class ProductCategory {
   products: Product[] = [];
 }
 
-
 export interface Product {
   id: number;
   name: string;
@@ -13,9 +12,8 @@ export interface Product {
   imgURL: string;
   url: string;
   category: { name: string; };  
+  liked: boolean;
 }
-
-
 
 export const products = [
   {
@@ -26,7 +24,8 @@ export const products = [
     rating: 5, 
     imgURL: "https://resources.cdn-kaspi.kz/img/m/p/h32/h70/84378448199710.jpg?format=gallery-large",
     url: "https://kaspi.kz/shop/p/apple-iphone-13-128gb-midnight-chernyi-102298404/?c=750000000",
-    category: {name: "Phone"}
+    category: {name: "Phone"},
+    liked: false
   },  
   {
     id: 2,
@@ -36,7 +35,8 @@ export const products = [
     rating: 5, 
     imgURL: "https://resources.cdn-kaspi.kz/img/m/p/h6c/h7c/69067267407902.jpg?format=gallery-medium",
     url: "https://kaspi.kz/shop/p/samsung-galaxy-s23-ultra-12-gb-512-gb-chernyi-108916047/?c=750000000",
-    category: {name: "Phone"}
+    category: {name: "Phone"},
+    liked: false
   },
   {
     id: 3,
@@ -46,7 +46,8 @@ export const products = [
     rating: 5, 
     imgURL: "https://resources.cdn-kaspi.kz/img/m/p/hd4/h47/63822392066078.jpg?format=gallery-medium",
     url: "https://kaspi.kz/shop/p/buratino-limonad-buratino-2-l-100208155/?c=750000000",
-    category: {name: "Product"}
+    category: {name: "Product"},
+    liked: false
   },
   {
     id: 4,
@@ -56,7 +57,8 @@ export const products = [
     rating: 5, 
     imgURL: "https://resources.cdn-kaspi.kz/img/m/p/h3b/hcb/83296490618910.jpg?format=gallery-medium",
     url: "https://kaspi.kz/shop/p/araltuz-povarennaja-sol-iodirovannaja-pomol-srednii-1000-g-100218821/?c=750000000",
-    category: {name: "Product"}
+    category: {name: "Product"},
+    liked: false
   },
   {
     id: 5,
@@ -66,7 +68,8 @@ export const products = [
     rating: 5, 
     imgURL: "https://resources.cdn-kaspi.kz/img/m/p/hd3/h1c/83678055694366.png?format=gallery-medium",
     url: "https://kaspi.kz/shop/p/mukaltin-tabletki-50-mg-10-sht-100990373/?c=750000000",
-    category: {name: "medications"}
+    category: {name: "medications"},
+    liked: false
   },
   {
     id: 6,
@@ -76,8 +79,8 @@ export const products = [
     rating: 5, 
     imgURL: "https://resources.cdn-kaspi.kz/img/m/p/heb/hf3/64143706423326.jpg?format=gallery-medium",
     url: "https://kaspi.kz/shop/p/teraflju-poroshok-325-mg-10-sht-101114328/?c=750000000",
-    category: {name: "medications"}
-
+    category: {name: "medications"},
+    liked: false
   },
   {
     id: 7,
@@ -87,8 +90,8 @@ export const products = [
     rating: 5, 
     imgURL: "https://alakcell-photos-kr.kcdn.kz/webp/6b/6bfa4ebf-afd7-41be-a0a1-7e434297216e/39-750x470.webp",
     url: "https://krisha.kz/a/show/672785350",
-    category: {name: "Home"}
-
+    category: {name: "Home"},
+    liked: false
   },
   {
     id: 8,
@@ -98,7 +101,8 @@ export const products = [
     rating: 5, 
     imgURL: "https://resources.cdn-kaspi.kz/img/m/p/h72/h3c/63859319341086.jpg?format=gallery-medium",
     url: "https://kaspi.kz/shop/p/ruchka-sharikovaja-cello-maxriter-xs-1-sht-tsvet-chernil-sinii-100369607/?c=750000000",
-    category: {name: "Product"}    
+    category: {name: "Product"},
+    liked: false  
   },
   {
     id: 9,
@@ -108,7 +112,8 @@ export const products = [
     rating: 5, 
     imgURL: "https://alakt-photos-kl.kcdn.kz/webp/64/6487010e-53c7-4f0e-ba90-9b5642feed00/7-1200x752.webp",
     url: "https://kolesa.kz/a/show/166018812",
-    category: {name: "Car"}    
+    category: {name: "Car"},
+    liked: false
   },
   {
     id: 10,
@@ -118,10 +123,10 @@ export const products = [
     rating: 5, 
     imgURL: "https://alakt-photos-kl.kcdn.kz/webp/dd/ddda6b37-da1b-47b6-a50a-96d21f72c8ac/18-1200x752.webp",
     url: "https://kolesa.kz/a/show/139693110",
-    category: {name: "Car"}    
+    category: {name: "Car"},
+    liked: false
   },
 ];
-
 
 /*
 Copyright Google LLC. All Rights Reserved.
