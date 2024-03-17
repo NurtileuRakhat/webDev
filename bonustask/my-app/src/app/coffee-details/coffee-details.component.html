@@ -1,0 +1,7 @@
+<div class="coffee-details" *ngIf="coffee">
+  <h2>{{ coffee.name }}</h2>
+  <p>{{ coffee.description }}</p>
+  <img [src]="coffee.image" alt="{{ coffee.name }}">
+  <p>Price: ${{ coffee.price }}</p>
+  <button (click)="addToCart()">Add to Cart</button>
+</div>

@@ -1,1 +1,9 @@
-<p>coffee-list works!</p>
+<div *ngFor="let coffee of coffees" class="coffee-item">
+    <a [routerLink]="['/coffee', coffee.name]">
+      <h3>{{ coffee.name }}</h3>
+      <p>{{ coffee.description }}</p>
+      <img [src]="coffee.image" alt="{{ coffee.name }}">
+      <p>Price: ${{ coffee.price }}</p>
+    </a>
+  </div>
+  
