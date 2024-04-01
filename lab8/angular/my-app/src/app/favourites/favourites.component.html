@@ -1,0 +1,13 @@
+<div class="container">
+  <router-outlet></router-outlet>
+  <div class = "favourites__wrapper">
+  <h2>Favourites</h2>
+        <div class="wrapper-item" *ngFor="let product of favourites">
+            <img src="{{product.imgURL}}" alt="">
+            <h3>{{ product.name }}</h3>
+            <p *ngIf="product.rating"><b>Rating:</b> {{ product.rating }}</p>
+            <h4>{{ product.price | currency }}</h4>
+            <p>{{ product.description }}</p>
+        </div>
+    </div>
+</div>
