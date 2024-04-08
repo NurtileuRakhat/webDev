@@ -42,18 +42,19 @@ export class ProductListComponent implements OnInit {
   }
 
   getProductCategories(): ProductCategory[] {
-    const categories: ProductCategory[] = [...new Set(this.products.map(p => p.category.name))].map(name => ({
-      id: 0,
-      name,
+    const uniqueCategories = Array.from(new Set(this.products.map(p => p.category.name)));
+    const categories: ProductCategory[] = uniqueCategories.map((name, index) => ({
+      id: index + 1,
+      name: name,
       products: this.products.filter(p => p.category.name === name)
     }));
-
+  
     categories.unshift({
       id: 0,
       name: 'all',
       products: this.products
     });
-
+  
     return categories;
   }
 
