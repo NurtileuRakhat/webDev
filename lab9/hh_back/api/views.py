@@ -4,7 +4,10 @@ from . import models
 
 def get_companies(request):
     companies = models.Company.objects.all()
-    companies_json = [comp.to_json() for comp in companies]
+    # companies_json = [comp.to_json() for comp in companies]
+    for comp in companies:
+        companies_json = []
+        companies_json.append(comp.to_json())
     return JsonResponse(companies_json, safe=False)
 
 def get_company(request, company_id):
